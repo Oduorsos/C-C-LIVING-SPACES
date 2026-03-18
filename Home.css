@@ -312,7 +312,7 @@ html, body {
 @media (max-width: 768px) {
 
   .hero {
-    padding: 0 24px;
+    padding: 0 15px;
     height: auto;
     min-height: 100vh;
   }
