@@ -21,31 +21,41 @@ const revealOnScroll = () => {
   });
 };
 
-const menu-toggle = document.getElementById("menu-toggle");
-const navLinks = document.querySelector(".nav-links");
-const overlay = document.querySelector(".nav-overlay");
-const nav-link = document.querySelectorAll(".nav-link");
+document.addEventListener("DOMContentLoaded", () => {
+  const navbar = document.getElementById("navbar");
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.querySelector(".nav-links");
+  const overlay = document.querySelector(".nav-overlay");
+  const body = document.body;
 
-/* TOGGLE MENU */
-menu-toggle.addEventListener("click", () => {
-  menu-toggle.classList.toggle("active");
-  navLinks.classList.toggle("active");
-  overlay.classList.toggle("active");
-});
+  // Handle Scroll
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
 
-/* CLOSE ON OVERLAY CLICK */
-overlay.addEventListener("click", () => {
-  menu-toggle.classList.remove("active");
-  navLinks.classList.remove("active");
-  overlay.classList.remove("active");
-});
+  // Toggle Menu
+  const toggleMenu = () => {
+    menuToggle.classList.toggle("active");
+    navLinks.classList.toggle("active");
+    overlay.classList.toggle("active");
+    // Prevent scrolling when menu is open
+    body.style.overflow = body.style.overflow === "hidden" ? "auto" : "hidden";
+  };
 
-/* CLOSE AFTER CLICKING LINK */
-nav-link.forEach(link => {
-  link.addEventListener("click", () => {
-    menu-toggle.classList.remove("active");
-    navLinks.classList.remove("active");
-    overlay.classList.remove("active");
+  menuToggle.addEventListener("click", toggleMenu);
+  overlay.addEventListener("click", toggleMenu);
+
+  // Close menu when clicking a link
+  document.querySelectorAll(".nav-link").forEach(link => {
+    link.addEventListener("click", () => {
+      if (navLinks.classList.contains("active")) {
+        toggleMenu();
+      }
+    });
   });
 });
 
