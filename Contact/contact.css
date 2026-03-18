@@ -351,6 +351,68 @@
     font-size: 2rem;
   }
 }
+/* WHATSAPP */
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+}
+
+/* subtle pulse animation */
+
+.whatsapp-float::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: rgba(37, 211, 102, 0.4);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  z-index: -1;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  70% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Mobile adjustment */
+
+@media (max-width: 768px) {
+  .whatsapp-float {
+    width: 55px;
+    height: 55px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
 /* FOOTER */
 .footer {
   background: #f4f4f4;
