@@ -189,7 +189,7 @@ html, body {
 .hero {
   height: 100vh;
   width: 100%;
-  background: url("../Assets/project1.jpeg") center/cover no-repeat;
+  background: url("Assets/project1.jpeg") center/cover no-repeat;
   position: relative;
   display: flex;
   align-items: center;
@@ -465,7 +465,7 @@ section {
   position: relative;
   height: 80%;
   margin-right: 80px;
-  background: url("../Assets/project7.jpg") center/cover no-repeat;
+  background: url("Assets/project7.jpg") center/cover no-repeat;
 }
 
 .image-overlay {
@@ -914,7 +914,7 @@ section {
 .cta-section {
   position: relative;
   padding: 100px 80px;
-  background: url("../Assets/project2.jpeg") center/cover no-repeat;
+  background: url("Assets/project2.jpeg") center/cover no-repeat;
   color: #fff;
   overflow: hidden;
 }
