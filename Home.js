@@ -23,32 +23,42 @@ const revealOnScroll = () => {
 
 const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.querySelector(".nav-links");
-const overlay = document.querySelector(".nav-overlay");
-const navItems = document.querySelectorAll(".nav-link");
+const navItems = document.querySelectorAll(".nav-item");
 
-/* TOGGLE MENU */
+/* Toggle main menu */
 menuToggle.addEventListener("click", () => {
-  menuToggle.classList.toggle("active");
   navLinks.classList.toggle("active");
-  overlay.classList.toggle("active");
 });
 
-/* CLOSE ON OVERLAY CLICK */
-overlay.addEventListener("click", () => {
-  menuToggle.classList.remove("active");
-  navLinks.classList.remove("active");
-  overlay.classList.remove("active");
-});
+/* Mobile dropdown toggle */
+navItems.forEach(item => {
+  const link = item.querySelector("a");
 
-/* CLOSE AFTER CLICKING LINK */
-navItems.forEach(link => {
-  link.addEventListener("click", () => {
-    menuToggle.classList.remove("active");
-    navLinks.classList.remove("active");
-    overlay.classList.remove("active");
+  link.addEventListener("click", (e) => {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      item.classList.toggle("active");
+
+      // close others
+      navItems.forEach(other => {
+        if (other !== item) {
+          other.classList.remove("active");
+        }
+      });
+    }
   });
 });
 
+/* Close menu on resize */
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 768) {
+    navLinks.classList.remove("active");
+    navItems.forEach(item => item.classList.remove("active"));
+  }
+});
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
 
 /* selected Projects */
 const homeprojectCards = document.querySelectorAll(".homeproject-card");
