@@ -547,3 +547,138 @@
     font-size: 28px;
   }
 }
+/* FOOTER */
+.footer {
+  background: #f4f4f4;
+  padding: 100px 100px 40px;
+  color: #222;
+}
+
+/* GRID */
+.footer-grid {
+  width: 100%;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1.2fr;
+  gap: 80px;
+  padding-bottom: 60px;
+}
+
+/* HEADINGS */
+.footer h3 {
+  font-size: 1.6rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.footer h4 {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #777;
+}
+
+/* BRAND */
+.footer-brand p {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: #555;
+  max-width: 380px;
+}
+
+/* LINKS */
+.footer a {
+  display: block;
+  font-size: 0.9rem;
+  color: #222;
+  text-decoration: none;
+  margin-bottom: 12px;
+  transition: opacity 0.3s ease;
+}
+
+.footer a:hover {
+  opacity: 0.6;
+}
+
+/* SOCIALS */
+.footer-socials {
+  display: flex;
+  gap: 18px;
+  margin-top: 25px;
+}
+
+.footer-socials a {
+  font-size: 1.1rem;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.footer-socials a:hover {
+  transform: translateY(-3px);
+  opacity: 0.7;
+}
+
+/* CONTACT */
+.footer-contact i {
+  margin-right: 8px;
+  opacity: 0.6;
+}
+
+/* NEWSLETTER */
+.footer-newsletter p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 18px;
+}
+
+.footer-newsletter form {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-newsletter input {
+  flex: 1;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  font-size: 0.85rem;
+}
+
+.footer-newsletter button {
+  padding: 12px 20px;
+  background: #111;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  font-size: 0.75rem;
+  color: #777;
+}
+
+@media (max-width: 768px) {
+
+  .footer {
+    padding: 80px 24px 40px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .footer-newsletter form {
+    flex-direction: column;
+  }
+
+  .footer-newsletter button {
+    width: 100%;
+  }
+}
+
