@@ -21,29 +21,29 @@ const revealOnScroll = () => {
   });
 };
 
-const menuToggle = document.getElementById("menu-toggle");
+const menu-toggle = document.getElementById("menu-toggle");
 const navLinks = document.querySelector(".nav-links");
 const overlay = document.querySelector(".nav-overlay");
-const navItems = document.querySelectorAll(".nav-link");
+const nav-link = document.querySelectorAll(".nav-link");
 
 /* TOGGLE MENU */
-menuToggle.addEventListener("click", () => {
-  menuToggle.classList.toggle("active");
+menu-toggle.addEventListener("click", () => {
+  menu-toggle.classList.toggle("active");
   navLinks.classList.toggle("active");
   overlay.classList.toggle("active");
 });
 
 /* CLOSE ON OVERLAY CLICK */
 overlay.addEventListener("click", () => {
-  menuToggle.classList.remove("active");
+  menu-toggle.classList.remove("active");
   navLinks.classList.remove("active");
   overlay.classList.remove("active");
 });
 
 /* CLOSE AFTER CLICKING LINK */
-navItems.forEach(link => {
+nav-link.forEach(link => {
   link.addEventListener("click", () => {
-    menuToggle.classList.remove("active");
+    menu-toggle.classList.remove("active");
     navLinks.classList.remove("active");
     overlay.classList.remove("active");
   });
