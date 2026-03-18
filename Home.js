@@ -21,7 +21,7 @@ const revealOnScroll = () => {
   });
 };
 
-const menuToggle = document.getElementById("menuToggle");
+const menuToggle = document.getElementById("menu-toggle");
 const navLinks = document.querySelector(".nav-links");
 const overlay = document.querySelector(".nav-overlay");
 const navItems = document.querySelectorAll(".nav-link");
@@ -48,6 +48,9 @@ navItems.forEach(link => {
     overlay.classList.remove("active");
   });
 });
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
 
 /* selected Projects */
 const homeprojectCards = document.querySelectorAll(".homeproject-card");
