@@ -18,7 +18,7 @@ html, body {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 999;
   background: transparent;
   transition: all 0.4s ease;
 }
@@ -34,42 +34,36 @@ html, body {
 }
 
 .logo {
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: 0.8rem;
+  font-weight: 200;
   letter-spacing: 2px;
   color: #fff;
-  text-transform: uppercase;
   transition: color 0.4s ease;
 }
 
 .nav-links {
   display: flex;
-  gap: 40px;
-  align-items: center;
+  gap: 50px;
 }
 
-.nav-link {
+.nav-link a{
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   letter-spacing: 1px;
   color: #fff;
-  text-transform: uppercase;
   transition: color 0.3s ease;
 }
 
 /* SCROLLED STATE (Desktop) */
 .navbar.scrolled {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  background: #ffffff;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.08);
 }
-
 .navbar.scrolled .nav-container {
-  padding: 15px 60px;
+  padding: 18px 60px;
 }
-
 .navbar.scrolled .logo,
-.navbar.scrolled .nav-link {
+.navbar.scrolled .nav-links a {
   color: #111;
 }
 
@@ -79,14 +73,14 @@ html, body {
   flex-direction: column;
   gap: 6px;
   cursor: pointer;
-  z-index: 1100;
+  z-index: 999;
 }
 
 #menuToggle span {
   width: 28px;
   height: 2px;
   background: #fff;
-  transition: 0.4s ease;
+  transition: 0.3s ease;
 }
 
 /* Navbar Scrolled Toggle Color */
@@ -101,7 +95,7 @@ html, body {
   }
 
   .nav-container {
-    padding: 20px 24px;
+    padding: 18px 24px;
   }
 
   .nav-links {
@@ -110,7 +104,7 @@ html, body {
     right: -100%; /* Hidden off-screen */
     width: 80%;
     max-width: 320px;
-    height: 100vh;
+    height: 60vh;
     background: #111;
     flex-direction: column;
     justify-content: center;
@@ -127,7 +121,7 @@ html, body {
 
   .nav-link {
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     opacity: 0;
     transform: translateX(20px);
     transition: 0.4s ease;
