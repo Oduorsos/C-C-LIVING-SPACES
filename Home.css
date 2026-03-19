@@ -31,7 +31,6 @@ html, body {
   align-items: center;
 }
 
-/* LOGO - Back to your 0.8rem / 200 weight */
 .logo {
   font-size: 0.8rem;
   font-weight: 200;
@@ -89,8 +88,9 @@ html, body {
   }
 
   .nav-container {
-    width: 100%;             
-    display: flex;          
+    width: 100%; 
+    margin: auto;
+    display: flex; 
     justify-content: space-between; 
     align-items: center;     
     padding: 18px 24px;
@@ -108,24 +108,22 @@ html, body {
     justify-content: center;
     padding-left: 40px;
     gap: 0; 
-    transition: right 0.3s ease-in-out;
+    transition: right 0.4s ease-in-out;
   }
 
   .nav-links.active {
     right: 0;
   }
 
-  /* MOBILE LINK FONT - Back to your 20px */
   .nav-link {
     color: #fff !important;
     font-size: 20px;
     margin: 15px 0;
     display: block;
-    opacity: 1; /* Keep visible, no blur */
+    opacity: 1;
     transform: none;
   }
 
-  /* TOGGLE ANIMATION to X */
   #menuToggle.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
     background: #fff !important;
@@ -139,11 +137,11 @@ html, body {
   }
 }
 
-/* SCROLLED NAVBAR */
 .navbar.scrolled {
   background: #ffffff;
   box-shadow: 0 6px 25px rgba(0,0,0,0.08);
 }
+
 /* HERO */
 .hero {
   height: 100vh;
