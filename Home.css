@@ -17,7 +17,7 @@ html, body {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 999;
   background: transparent;
   transition: all 0.4s ease;
 }
@@ -68,7 +68,7 @@ html, body {
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
-  z-index: 1100;
+  z-index: 999;
 }
 
 #menuToggle span {
@@ -104,7 +104,7 @@ html, body {
     justify-content: center;
     padding-left: 40px;
     gap: 0; 
-    transition: right 0.4s ease-in-out;
+    transition: right 0.3s ease-in-out;
   }
 
   .nav-links.active {
