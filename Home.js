@@ -25,37 +25,34 @@ document.addEventListener("DOMContentLoaded", () => {
   const navbar = document.getElementById("navbar");
   const menuToggle = document.getElementById("menuToggle");
   const navLinks = document.querySelector(".nav-links");
-  const overlay = document.querySelector(".nav-overlay");
-  const body = document.body;
 
-  // Handle Scroll
+  const closeMenu = () => {
+    menuToggle.classList.remove("active");
+    navLinks.classList.remove("active");
+  };
+
+  // 1. Scroll logic
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
+
+    if (window.scrollY > 80) {
       navbar.classList.add("scrolled");
     } else {
       navbar.classList.remove("scrolled");
     }
+
+    if (navLinks.classList.contains("active")) {
+      closeMenu();
+    }
   });
 
-  // Toggle Menu
-  const toggleMenu = () => {
+  // 3. Toggle click logic
+  menuToggle.addEventListener("click", () => {
     menuToggle.classList.toggle("active");
     navLinks.classList.toggle("active");
-    overlay.classList.toggle("active");
-    // Prevent scrolling when menu is open
-    body.style.overflow = body.style.overflow === "hidden" ? "auto" : "hidden";
-  };
+  });
 
-  menuToggle.addEventListener("click", toggleMenu);
-  overlay.addEventListener("click", toggleMenu);
-
-  // Close menu when clicking a link
   document.querySelectorAll(".nav-link").forEach(link => {
-    link.addEventListener("click", () => {
-      if (navLinks.classList.contains("active")) {
-        toggleMenu();
-      }
-    });
+    link.addEventListener("click", closeMenu);
   });
 });
 
