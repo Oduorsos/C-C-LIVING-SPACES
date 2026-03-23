@@ -385,13 +385,29 @@
 <div class="modal" id="contactModal">
   <div class="modal-content">
 
-    <h3>Start a Project</h3>
+    <h2>Start a Project</h2>
     <p>Tell us about your space and vision.</p>
 
-    <form>
-      <input type="text" placeholder="Full Name" required />
-      <input type="email" placeholder="Email Address" required />
-      <textarea placeholder="Project details" rows="4"></textarea>
+    <form action="https://formsubmit.co/cynthiamaina528@gmail.com" method="POST">
+
+      <input type="hidden" name="_subject" value="New Project Inquiry - C&C Living Spaces">
+      <input type="hidden" name="_captcha" value="false">
+
+      <input type="text" name="Name" placeholder="Full Name" required>
+      <input type="email" name="Email" placeholder="Email Address" required>
+      <input type="tel" name="Phone" placeholder="Phone Number">
+
+      <select title="Service Type" name="Service Type" required>
+        <option value="">Select Service</option>
+        <option>Interior Design</option>
+        <option>Space Planning</option>
+        <option>Consultation</option>
+        <option>Project Management</option>
+        <option>Custom Furniture</option>
+      </select>
+
+      <textarea title="Project Details" name="Project Details" placeholder="Tell us about your project..." rows="4"></textarea>
+
       <button type="submit" class="send-btn">Send Inquiry</button>
       <button type="button" class="close-modal">Close</button>
     </form>
@@ -468,7 +484,7 @@
 
 <script src="Home.js"></script>
 
-  <a href="https://wa.me/254759880445?text=Hello%20C%26C%20Living%20Spaces,%20I’m%20interested%20in%20your%20services"
+  <a rel="noopener noreferrer" href="https://wa.me/254759880445?text=Hello%20C%26C%20Living%20Spaces,%20I’m%20interested%20in%20your%20services"
    class="whatsapp-float"
    target="_blank"
    aria-label="Chat with us on WhatsApp">
