@@ -14,7 +14,7 @@ const detailApproach = document.getElementById("detailApproach");
 const projectData = {
   "Modern Living Room": {
     category: "Residential",
-    location: "Nairobi",
+    location: "Coast",
     year: "2025",
     size: "450 sqm",
     description:
