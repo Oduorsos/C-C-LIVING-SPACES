@@ -12,7 +12,7 @@ const detailApproach = document.getElementById("detailApproach");
 /* PROJECT DATA */
 
 const projectData = {
-  "Modern Residence": {
+  "Modern Living Room": {
     category: "Residential",
     location: "Nairobi",
     year: "2025",
@@ -23,7 +23,7 @@ const projectData = {
       "We used warm wood finishes, stone textures and large glazing systems to enhance spatial continuity and elegance."
   },
 
-  "Corporate Workspace": {
+  "Corporate Office Waiting Area": {
     category: "Workplace",
     location: "Westlands",
     year: "2024",
@@ -34,7 +34,7 @@ const projectData = {
       "Open-plan workstations combined with private meeting pods create balance between interaction and focus."
   },
 
-  "Boutique Hotel": {
+  "Elegant Dining Area": {
     category: "Hospitality",
     location: "Diani",
     year: "2023",
